@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller" styleClass="root-pane">
+    <children>
+        <!-- Title -->
+        <Label layoutX="250.0" layoutY="20.0" text="ARTICLE" styleClass="title-label" />
+        
+        <!-- Input Fields -->
+        <Label layoutX="107.0" layoutY="95.0" text="Code Article" styleClass="label" />
+        <TextField fx:id="codeArticleField" layoutX="216.0" layoutY="94.0" promptText="Taper le code" styleClass="text-field" />
+        <Label layoutX="107.0" layoutY="147.0" text="Libellé" styleClass="label" />
+        <TextField fx:id="libelleField" layoutX="216.0" layoutY="147.0" promptText="Taper le libellé" styleClass="text-field" />
+        <Label layoutX="107.0" layoutY="195.0" text="Quantité" styleClass="label" />
+        <TextField fx:id="qteField" layoutX="216.0" layoutY="194.0" promptText="Taper la quantité" styleClass="text-field" />
+        <Label layoutX="107.0" layoutY="243.0" text="Prix HT" styleClass="label" />
+        <TextField fx:id="prixHTField" layoutX="216.0" layoutY="242.0" promptText="Taper le prix HT" styleClass="text-field" />
+
+        <!-- Buttons (evenly spaced) -->
+        <Button fx:id="addButton" layoutX="50.0" layoutY="320.0" text="Ajouter" onAction="#addArticle" styleClass="button" />
+        <Button layoutX="180.0" layoutY="320.0" text="Mettre à jour" onAction="#updateArticle" styleClass="button" />
+        <Button layoutX="310.0" layoutY="320.0" text="Supprimer" onAction="#deleteArticle" styleClass="button" />
+        <Button layoutX="440.0" layoutY="320.0" text="Rechercher" onAction="#searchArticle" styleClass="button" />
+    </children>
+</AnchorPane>

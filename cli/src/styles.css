@@ -1,0 +1,75 @@
+/* Root pane styles with animated background */
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+    -fx-padding: 20;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-background-position: center;
+    -fx-background-size: 300% 300%;
+    -fx-animation: bg-animation 10s infinite;
+}
+
+/* Keyframe animation for background gradient */
+@keyframes bg-animation {
+    0% {
+        -fx-background-position: 0% 50%;
+    }
+    50% {
+        -fx-background-position: 100% 50%;
+    }
+    100% {
+        -fx-background-position: 0% 50%;
+    }
+}
+
+/* Title label styles */
+.title-label {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-underline: true;
+    -fx-alignment: center;
+}
+
+/* Label styles */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #444444;
+}
+
+/* TextField styles */
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ffffff;
+}
+
+/* Button styles */
+.button {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #5a9bd4;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0.5, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #4179a6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.7, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: #305e80;
+}
+
+/* Space and alignment adjustments */
+.root-pane .button {
+    -fx-margin: 15px;
+}
